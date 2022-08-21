@@ -1,0 +1,252 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1;
+  font-weight: 400;
+  background-color: hsl(185, 41%, 84%);
+  font-family: 'Space Mono', monospace;
+  margin-top: 10rem;
+}
+
+.calc-container {
+  max-width: 85rem;
+  padding: 4rem;
+  margin: 5% auto;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+h1 {
+  font-size: 3.6rem;
+  margin-bottom: 6.4rem;
+  color: hsl(186, 14%, 43%);
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 50px;
+  letter-spacing: 10px;
+}
+
+/***********************************/
+/* GENERAL REUSABLE COMPONENTS */
+/***********************************/
+
+.container {
+  margin-bottom: 4rem;
+}
+
+.labels {
+  font-size: 1.4rem;
+  grid-column: 1 / -1;
+  color: hsl(186, 14%, 43%);
+  font-weight: 600;
+}
+
+::placeholder {
+  color: hsl(186, 14%, 43%);
+  font-family: 'Space Mono', monospace;
+  font-size: 1.8rem;
+  font-weight: 700;
+  opacity: 0.6;
+  padding-right: 0.4rem;
+}
+
+.white-clr {
+  color: hsl(0, 0%, 100%);
+}
+
+.gray-clr {
+  color: hsl(184, 14%, 56%);
+}
+
+.column1 {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+#bill,
+#num-people,
+.custom-tip {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+  text-align: right;
+
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+/***********************************/
+/* BILL SECTION */
+/***********************************/
+.form-wrapper {
+  display: flex;
+}
+
+.bill-ammount,
+.num-ppl {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#bill {
+  background: hsl(189, 41%, 97%) url(images/icon-dollar.svg) no-repeat center
+    left;
+  background-position-x: 1.2rem;
+  border: 2px solid transparent;
+}
+
+#bill:focus {
+  outline: none;
+  border: 2px solid hsl(172, 67%, 45%);
+  box-shadow: 0 0 10px hsl(185, 41%, 84%);
+  background-position-x: 1.2rem;
+}
+
+/***********************************/
+/* TIP AMMOUNT SECTION */
+/***********************************/
+
+.tip-percentages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.tip-ammount {
+  display: flex;
+}
+
+.btn-tip {
+  border: none;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 0.6rem;
+  height: 4rem;
+  width: 10rem;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+.btn-tip:hover {
+  background-color: hsl(172, 67%, 45%);
+}
+
+.custom-tip {
+  border: none;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.6rem;
+  border-radius: 0.6rem;
+  background-color: hsl(185, 41%, 84%);
+  height: 4rem;
+  width: 10rem;
+}
+
+.custom-tip::placeholder {
+  color: hsl(186, 14%, 43%);
+  opacity: 1;
+  text-align: right;
+}
+
+/***********************************/
+/* NUM PEOPLE SECTION */
+/***********************************/
+
+.num-ppl-labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+#num-people {
+  background: hsl(189, 41%, 97%) url(images/icon-person.svg) no-repeat center
+    left;
+  background-position-x: 1.2rem;
+  border: 2px solid transparent;
+}
+
+#num-people:focus {
+  outline: none;
+  border: 2px solid hsl(172, 67%, 45%);
+  box-shadow: 0 0 10px hsl(185, 41%, 84%);
+  background-position-x: 1.2rem;
+}
+
+.label-h {
+  color: red;
+  opacity: 0.8;
+}
+
+.hidden {
+  display: none;
+}
+/***********************************/
+/* RESULTS SECTION */
+/***********************************/
+
+.column2 {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 1rem;
+}
+
+.tip-ammount-final,
+.total-result {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.tip-result,
+.tip-result-total {
+  color: hsl(172, 67%, 45%);
+  font-size: 3.6rem;
+  font-weight: 600;
+}
+
+.btn-reset {
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  align-self: center;
+  width: 80%;
+  border-radius: 0.4rem;
+  margin: auto 0 3rem 0;
+
+  cursor: pointer;
+}
+
+.btn-reset:hover {
+  background-color: hsl(185, 41%, 84%);
+}
+
+@media (max-width: 750px) {
+  .calc-container {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .column1 {
+    margin-bottom: 3rem;
+  }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Spli<br />tter</h1>
+    <main class="calc-container">
+      <div class="column1">
+        <form class="bill-ammount container">
+          <label for="bill" class="labels">Bill</label>
+          <input
+            id="bill"
+            name="bill-num"
+            type="number"
+            placeholder="0"
+            required
+          />
+        </form>
+
+        <div class="tip-ammount container">
+          <form class="tip-percentages">
+            <label class="labels">Select Tip %</label>
+            <input
+              type="button"
+              name="calc-tip-btn"
+              value="5%"
+              class="btn-tip p5"
+            />
+            <input
+              type="button"
+              name="calc-tip-btn"
+              value="10%"
+              class="btn-tip p10"
+            />
+            <input
+              type="button"
+              name="calc-tip-btn"
+              value="15%"
+              class="btn-tip p15"
+            />
+            <input
+              type="button"
+              name="calc-tip-btn"
+              value="25%"
+              class="btn-tip p25"
+            />
+            <input
+              type="button"
+              name="calc-tip-btn"
+              value="50%"
+              class="btn-tip p50"
+            />
+
+            <input type="number" class="custom-tip" placeholder="Custom" />
+          </form>
+        </div>
+
+        <div class="num-ppl">
+          <div class="num-ppl-labels">
+            <label for="num-people" class="labels">Number of People</label>
+            <label for="num-people" class="labels label-h hidden"
+              >Can't be zero</label
+            >
+          </div>
+
+          <input id="num-people" type="number" placeholder="0" required />
+        </div>
+      </div>
+
+      <div class="column2">
+        <div class="tip-ammount-final">
+          <div class="tip-text">
+            <label class="labels white-clr">Tip Amount</label>
+            <p class="gray-clr">/ person</p>
+          </div>
+          <div class="tip-result">$0</div>
+        </div>
+        <div class="total-result">
+          <div class="tip-text">
+            <label class="labels white-clr">Total</label>
+            <p class="gray-clr">/ person</p>
+          </div>
+          <div class="tip-result-total">$0</div>
+        </div>
+        <button class="btn-reset">Reset</button>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Goran Kolar</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
